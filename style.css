@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Teko&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-position: center;
+    background-image: url(/CountDownTimerwithClock/Media/joshua-michaels-TbqCtSzaRKE-unsplash.jpg);
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'poppins', sans-serif;
+    font-size: 50px;
+    color: brown;
+    align-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    background-color:chocolate;
+    height: 40vh;
+    width: 50lvh;
+    max-width: 400px;
+    border: solid chartreuse 6px;
+    border-radius: 150px;
+    position: relative;
+}
+
+.clock .num {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: 'Teko', sans-serif;
+    color:chartreuse;
+    font-size: 55px;
+    text-align: center;
+    transform: rotate(var(--rotation))
+}
+
+.clock .no1 {
+    --rotation: 30deg;
+}
+
+.clock .no2 {
+    --rotation: 60deg;
+}
+
+.clock .no3 {
+    --rotation: 90deg;
+}
+
+.clock .no4 {
+    --rotation: 120deg;
+}
+
+.clock .no5 {
+    --rotation: 150deg;
+}
+
+.clock .no6 {
+    --rotation: 180deg;
+}
+
+.clock .no7 {
+    --rotation: 210deg;
+}
+
+.clock .no8 {
+    --rotation: 240deg;
+}
+
+.clock .no9 {
+    --rotation: 270deg;
+}
+
+.clock .no10 {
+    --rotation: 300deg;
+}
+
+.clock .no11 {
+    --rotation: 330deg;
+}
+
+.clock .no12 {
+    --rotation: 360deg;
+}
+
+
+.hourHand,
+.minuteHand,
+.secondHand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color:olivedrab;
+    z-index: 11;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+}
+
+.hourHand {
+    width: 10px;
+    height: 25%;
+    background-color:olivedrab;
+}
+
+.minuteHand {
+    width: 10px;
+    height: 35%;
+    background-color: olivedrab;
+}
+
+.secondHand {
+    width: 5px;
+    height: 40%;
+    background-color:chartreuse;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 500x) {
+    h1 {
+        font-size: 45px;
+    }
+
+    .time {
+        margin: 5px;
+    }
+
+    .time h2 {
+        font-size: 12px;
+    }
+
+    #small {
+        font-size: 10px;
+    }
+}
